@@ -20,8 +20,8 @@ class LocationEvents:
         # self.atribute1 = atribute1
         self.presence = presence
 
-    def add_event(self) #TO DO - inheritance):
-
+    def add_event(self): #TO DO - inheritance):
+        pass
 # TO DO create the setter.
 
         if something happened
@@ -79,10 +79,7 @@ red = (255, 0, 0)
 blue = (0, 0, 255)
 white = (255, 255, 255)
 
-game_state = { 
-          
-          "room_index" : 0
-        }
+game_state = {"room_index" : 0} # pulled from trinket rock scissor paper
 
 sense.clear()
 while True:

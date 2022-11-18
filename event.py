@@ -109,7 +109,7 @@ if __name__ == '__main__':
 		
 		inhabitant = current_room.get_person()
 		if inhabitant is not None:
-		    inhabitant.describe()
+			inhabitant.describe()
 
 		# Add this to terminate the program
 		if command == "exit":

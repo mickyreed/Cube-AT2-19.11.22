@@ -1,0 +1,25 @@
+class Event:
+	def __init__(self, location, presence = False, temperature = 0, humidity = 0):
+		"""
+		Event class to indicate if someone is in a room
+		"""
+		self.location = location
+		# self.timestamp = datetime.now()
+		self.presence = presence
+		self.temperature = temperature
+		self.humidity = humidity
+		
+	
+	def __str__(self):
+		return f"location (self.location),\ntimestamp (self.timestamp,\npresence (self.presence),\ntemparature (self.temparture,\nhumidity (self.humidity)\n"
+
+import Event
+
+if __name__ == '__main__':
+    event1 = Event ('Lounge Room')
+    event2 = Event ('Kitchen')
+    event3 = Event ('Living Room')
+    print(f'event1.temperature')
+    print(f'event2.temperature')
+    print(f'event3.temperature')
+    print(f'event1.humidity')

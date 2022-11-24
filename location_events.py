@@ -12,17 +12,19 @@ class LocationEvents:
     Write the __init__ method so that these requirements are met. 
     '''
 
-    def __init__(self, presence= False ): #TO DO atributes to be passed
+    def __init__(self, location, presence= False ): #TO DO atributes to be passed
 
 #TO DO define atributes
 
         # self.atribute1 = atribute1 
         # self.atribute1 = atribute1
+        self.location = location
         self.presence = presence
 
     def add_event(self): #TO DO - inheritance):
         pass
 # TO DO create the setter.
+    def enter_room(self, location, presence):
 
         if something happened
             self.set the attributes for the data types eg bool
@@ -102,7 +104,7 @@ while True:
         print(event.direction, event.action)
         temp = sense.temp
         print(temp)
-        humidity = sense.humidity
+        humidity = sense.humidityLocation
         print(humidity)
         pressure = sense.pressure
         print(pressure)

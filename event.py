@@ -1,8 +1,18 @@
 # All refernces to the sense hat removed for developing on any system.  
 # you will need to add the sense hat to get values and collect events
 
+"""
+From the requirements, you infer that a core element of the solution might be an ‘event’. This will indicate that someone is (or isn’t) in a room or a zone. 
+Since your prototype will use a Raspberry Pi with SenseHat, you should incorporate at least one extra sensor value in that class. (This is also in the requirements.)
+
+"""
+
+
+
+
 from time import sleep
 from datetime import datetime
+#from sense_hat import SenseHat
 
 class Event:
 	def __init__(self, location, presence = False, temperature = 0, humidity = 0):
@@ -89,7 +99,7 @@ if __name__ == '__main__':
 	# event1.get_details()
 	# event2.get_details()
 
-	current_room = event1
+	# current_room = event1
 	from person import Person
 	dave = Person("Dave", "A smelly zombie")
 	# dave.describe()
@@ -99,6 +109,9 @@ if __name__ == '__main__':
 
 	while True:
 		print("\n")
+		print(f'Kitchen presence = {event1.presence}')
+		print(f'Living Presence = {event2.presence}')
+		print(f'Lounge Presence = {event3.presence}')
 		current_room.describe_location()
 		current_room.set_timestamp(datetime.now())
 		print(f'{current_room.location} presence = {current_room.presence} at {current_room.timestamp}')
@@ -118,9 +131,7 @@ if __name__ == '__main__':
 		current_room.presence = False	
 		current_room = current_room.move(command)
 		current_room.presence = True
-		print(f'Kitchen presence = {event1.presence}')
-		print(f'Living Presece = {event2.presence}')
-		print(f'Lounge Presence = {event3.presence}')
+		
 		
 		# inhabitant = current_room.get_person()
 		# if inhabitant is not None:
